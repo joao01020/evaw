@@ -1,0 +1,11 @@
+{
+  "name": "evay-neura",
+  "version": "1.0.0",
+  "main": "static/js/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^38.1.2"
+  }
+}

@@ -1,0 +1,135 @@
+css
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo futurista */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0d0d0d, #0f331a);
+  color: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Canvas partículas */
+#particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: transparent;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(10,40,20,0.85);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,255,136,0.2);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+  z-index: 10;
+}
+
+#saldo-display {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00ff88;
+}
+
+/* Botões */
+.btn {
+  background: linear-gradient(135deg, #00b36b, #00ff88);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ff88;
+}
+
+/* Layout principal */
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  z-index: 5;
+  position: relative;
+}
+
+/* Cards */
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0,255,136,0.3);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #00ff88;
+}
+
+/* Histórico */
+#historico ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#historico li {
+  margin-bottom: 0.5rem;
+  padding: 0.6rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+#entrada-valor {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+#entrada-valor::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+/* Gráficos */
+canvas {
+  width: 100%;
+  height: 300px;
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Evay-Neura — Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== Reset ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0f0f1a;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        canvas#bg-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        /* ===== Container ===== */
+        .login-container {
+            position: relative;
+            z-index: 1;
+            background: rgba(30,30,46,0.95);
+            padding: 3rem 2.5rem;
+            border-radius: 16px;
+            width: 380px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0,255,195,0.3);
+        }
+
+        .login-container h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00ff96;
+            letter-spacing: 1px;
+            margin-bottom: 1.2rem;
+        }
+
+        .login-container p {
+            font-size: 1rem;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+            color: #cfcfcf;
+            margin-bottom: 1rem;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border: none;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.05);
+            color: #fff;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus {
+            background: rgba(255,255,255,0.12);
+            box-shadow: 0 0 10px rgba(0,255,150,0.3);
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            background: linear-gradient(135deg, #00ff96, #007b33);
+            color: #0f0f1a;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,255,150,0.4);
+        }
+
+        #drop-zone {
+            margin-top: 20px;
+            padding: 22px;
+            border: 2px dashed #00ff96;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+        }
+
+        #drop-zone:hover {
+            background: rgba(0,255,150,0.1);
+        }
+
+        #drop-zone.dragover {
+            background: rgba(0,255,150,0.15);
+        }
+
+        #file-info, #status-msg {
+            font-size: 0.85rem;
+            margin-top: 8px;
+            opacity: 0.85;
+            color: #cfcfcf;
+        }
+
+    </style>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="login-container">
+        <h1>Evaw</h1>
+        <p>Conecte sua Wallet</p>
+
+        <input type="text" id="wallet-seed" placeholder="Digite sua seed (opcional)">
+
+        <button id="create-all-keys-btn">Gerar Chaves</button>
+        <button id="btn-generate">Gerar Acesso Rápido (TXT)</button>
+
+        <div id="drop-zone" class="drop-zone">
+            Arraste chave instantânea (.key)         </div>
+        <input id="file-input" type="file" accept=".key,.json,text/plain" style="display:none" />
+
+        <p id="file-info"></p>
+        <p id="status-msg"></p>
+    </div>
+
+    <script src="../static/js/renderer.js"></script>
+
+    <script>
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        class Particle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.3;
+                this.vy = (Math.random() - 0.5) * 0.3;
+                this.radius = Math.random() * 2 + 1;
+                this.alpha = Math.random() * 0.5 + 0.2;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(0,255,150,${this.alpha})`;
+                ctx.fill();
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if(this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
+                this.draw();
+            }
+        }
+
+        const particles = [];
+        for(let i = 0; i < 120; i++) particles.push(new Particle());
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => p.update());
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>

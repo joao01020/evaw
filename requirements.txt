@@ -1,0 +1,7 @@
+flask
+cryptography
+requests
+numpy
+pandas
+matplotlib
+networkx

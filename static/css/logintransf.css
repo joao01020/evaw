@@ -1,0 +1,89 @@
+/* ===================== dashboard.css ===================== */
+
+/* Fundo dark */
+body {
+background-color: #0d0d0d;
+color: #fff;
+font-family: Arial, sans-serif;
+margin: 0;
+overflow: hidden;
+}
+
+/* Canvas do ecossistema */
+#ecosystem-canvas {
+position: fixed;
+top: 0;
+left: 0;
+z-index: 0;
+}
+
+/* Cards das carteiras */
+.wallet-card {
+position: absolute;
+width: 200px;
+height: 160px;
+background: rgba(20, 20, 20, 0.95);
+border: 1px solid #0f0;
+border-radius: 12px;
+padding: 10px;
+color: #0f0;
+font-size: 14px;
+overflow: hidden;
+transition: all 0.3s ease;
+cursor: pointer;
+box-shadow: 0 0 10px rgba(0,255,0,0.3);
+}
+
+/* Ícone de fone */
+.wallet-card .synced-icon {
+position: absolute;
+top: 8px;
+right: 8px;
+font-size: 20px;
+color: #0f0;
+display: none;
+}
+.wallet-card.synced .synced-icon {
+display: block;
+}
+
+/* Card expandido */
+.wallet-card.expanded {
+width: 280px;
+height: 320px;
+z-index: 10;
+background: rgba(15, 15, 15, 0.98);
+border: 2px solid #0f0;
+}
+
+/* Conteúdo quando expandido */
+.wallet-card.expanded .details {
+margin-top: 40px;
+font-size: 16px;
+text-align: center;
+color: #fff;
+}
+
+/* Histórico da carteira */
+.wallet-history {
+display: none;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(0,0,0,0.9);
+color: #0f0;
+font-size: 12px;
+padding: 8px;
+border-top: 1px solid #0f0;
+max-height: 120px;
+overflow-y: auto;
+animation: fadeOut 4s forwards;
+}
+
+/* Animação de desaparecer */
+@keyframes fadeOut {
+0% { opacity: 1; }
+80% { opacity: 1; }
+100% { opacity: 0; display: none; }
+}

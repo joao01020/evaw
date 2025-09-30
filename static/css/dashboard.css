@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; background:#000; font-family:Consolas,monospace; color:#00ff99; overflow:hidden; }
+canvas#ecosystem-canvas { display:block; width:100vw; height:100vh; background:#000; }
+
+#cards-root { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+
+.wallet-card {
+  position:absolute; top:50px; left:50px;
+  min-width:280px; max-width:360px; background:#111; color:#00ff99;
+  border-radius:12px; padding:12px; box-shadow: 0 6px 24px rgba(0,255,153,0.08);
+  border:1px solid rgba(0,255,153,0.12); pointer-events:auto; font-size:13px;
+}
+.wallet-card .card-header { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:8px; }
+.wallet-card .badge { background: rgba(255,255,255,0.06); padding:4px 6px; border-radius:6px; color:#fff; font-size:12px; }
+.drop-area { border:2px dashed #00ff99; border-radius:8px; padding:8px; text-align:center; color:#00ff99; margin-top:8px; }
+.reactions { display:flex; gap:6px; margin-top:8px; }
+.reactions button { width:46px; height:36px; font-size:16px; cursor:pointer; }

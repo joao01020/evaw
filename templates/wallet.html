@@ -1,0 +1,139 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecossistema EVAI — Minha Carteira</title>
+  <link rel="stylesheet" href="../static/css/carteira.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Canvas de partículas -->
+  <canvas id="particles-bg"></canvas>
+
+  <header>
+    <div id="saldo-display">
+      Saldo: <span id="saldo">100</span> EVAI 
+      (<span id="evolucao">0%</span>)
+    </div>
+    <div>
+      <button class="btn" id="btn-dashboard">Dashboard</button>
+      <button class="btn" onclick="window.location.href='Transferir.html'">Transferir</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Evolução do Saldo</h2>
+      <canvas id="saldoChart"></canvas>
+    </div>
+    <div class="card">
+      <h2>Movimentações</h2>
+      <canvas id="movChart"></canvas>
+    </div>
+    <div class="card" id="historico">
+      <h2>Histórico de Entradas</h2>
+      <ul id="lista-historico"></ul>
+      <input type="number" id="entrada-valor" placeholder="Valor em EVAI">
+      <button class="btn" id="adicionar-entrada">Adicionar</button>
+    </div>
+  </main>
+
+  <script>
+    const saldoSpan = document.getElementById("saldo");
+    const evolucaoSpan = document.getElementById("evolucao");
+    const listaHistorico = document.getElementById("lista-historico");
+
+    let saldo = 100;
+    let historico = [];
+    let saldoChart, movChart;
+
+    // Redireciona para Dashboard
+    document.getElementById("btn-dashboard").addEventListener("click", () => {
+      window.location.href = "dashboard.html";
+    });
+
+    function atualizarSaldo(valor) {
+      let saldoAnterior = saldo;
+      saldo += valor;
+      let evolucao = ((saldo - saldoAnterior) / saldoAnterior * 100).toFixed(2);
+      saldoSpan.textContent = saldo;
+      evolucaoSpan.textContent = `${evolucao}%`;
+      atualizarGraficos(valor);
+    }
+
+    function atualizarGraficos(valor) {
+      saldoChart.data.labels.push(new Date().toLocaleTimeString());
+      saldoChart.data.datasets[0].data.push(saldo);
+      saldoChart.update();
+
+      movChart.data.labels.push(new Date().toLocaleTimeString());
+      movChart.data.datasets[0].data.push(valor);
+      movChart.update();
+    }
+
+    document.getElementById("adicionar-entrada").addEventListener("click", () => {
+      let valor = parseFloat(document.getElementById("entrada-valor").value);
+      if (!isNaN(valor) && valor > 0) {
+        historico.push(valor);
+        let li = document.createElement("li");
+        li.textContent = `+${valor} EVAI em ${new Date().toLocaleString()}`;
+        listaHistorico.appendChild(li);
+        atualizarSaldo(valor);
+        document.getElementById("entrada-valor").value = "";
+      }
+    });
+
+    // Configuração inicial dos gráficos
+    window.onload = () => {
+      const ctx1 = document.getElementById("saldoChart");
+      saldoChart = new Chart(ctx1, {
+        type: "line",
+        data: {
+          labels: [],
+          datasets: [{
+            label: "Saldo EVAI",
+            data: [],
+            borderColor: "#00ff88",
+            backgroundColor: "rgba(0,255,136,0.2)",
+            borderWidth: 2,
+            fill: true,
+            tension: 0.3,
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { labels: { color: "#fff" } } },
+          scales: {
+            x: { ticks: { color: "#fff" } },
+            y: { ticks: { color: "#fff" } }
+          }
+        }
+      });
+
+      const ctx2 = document.getElementById("movChart");
+      movChart = new Chart(ctx2, {
+        type: "bar",
+        data: {
+          labels: [],
+          datasets: [{
+            label: "Movimentações",
+            data: [],
+            backgroundColor: "#00ff88"
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { labels: { color: "#fff" } } },
+          scales: {
+            x: { ticks: { color: "#fff" } },
+            y: { ticks: { color: "#fff" } }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+```
