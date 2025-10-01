@@ -135,13 +135,8 @@ Como o conteúdo gera valor e cria o ecossistema
 	•	Validadores têm incentivo para manter a rede justa
 	•	A rede cresce de forma orgânica e equilibrada, evitando congestionamento e abuso
 
-	
-
-1. **Limite total de tokens**
-   - Existe um **número máximo de tokens EVAI em circulação**, evitando inflação e garantindo que cada unidade tenha valor real.
-  
    - 
-   - Esse limite protege a rede de congestionamentos e mantém o ecossistema saudável.
+   - limite que protege a rede de congestionamentos e mantém o ecossistema saudável.
 
 2. **Uso para segurança e validação**
    - Parte dos tokens em circulação é utilizada para **garantir a segurança da rede**:
@@ -200,6 +195,7 @@ não é um meio de pagamento oficial.***
 
 
 Mesmo na versão inicial, o projeto mostra **estrutura, visão e potencial**, convidando qualquer usuário a **participar, contribuir e crescer junto com a comunidade**.
+
 
 
 
