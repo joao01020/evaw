@@ -95,7 +95,9 @@ Evaw é uma rede feita para a colaboração, onde cada usuário contribui com id
 	•	Evolução contínua: Conforme mais usuários participam, a rede cresce, aprende e se torna cada vez mais eficiente, criando um ecossistema autossustentável e descentralizado.
 	•	Colaboração como motor: Evaw transforma interação e criatividade em valor, incentivando todos a contribuir de forma ética e transparente.
 
-Em resumo: Evaw busca ser uma rede evoluída, onde colaboração, ideias de valor e segurança caminham juntas para criar um ecossistema descentralizado único.
+Em resumo: Evaw busca ser uma rede evoluída, onde colaboração, 
+ideias de valor e segurança 
+caminham juntas para criar um ecossistema descentralizado único.
 
 ## Economia de Tokens e Distribuição Justa
 
