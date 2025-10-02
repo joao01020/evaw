@@ -180,9 +180,45 @@ Como o conteúdo gera valor e cria o ecossistema
 ---
 
 **Resumo:**  
-O sistema de tokens EVAI do Evaw funciona como **coluna vertebral do ecossistema**, garantindo **segurança, valorização, participação ética e descoberta justa de conteúdos**, enquanto mantém o equilíbrio e a eficiência da rede.
+O sistema de tokens EVAI do Evaw funciona como **coluna vertebral do ecossistema**, garantindo **segurança, valorização, participação ética e descoberta justa de conteúdos**, enquanto mantém o equilíbrio e a eficiência da Aviso de Isenção de Responsabilidade (Disclaimer)
 
+1. Natureza do Projeto
 
+Evaw é um projeto open source e descentralizado, criado com o objetivo de permitir que usuários compartilhem conteúdo, ideias e criatividade de forma ética, segura e tokenizada.
+	•	O projeto é autônomo e não possui administração central.
+	•	Toda ação dentro da rede — publicação, validação e distribuição de tokens EVAI — é controlada pela comunidade e pelos algoritmos do sistema, não por nenhum indivíduo específico.
+
+⸻
+
+2. Responsabilidade
+	•	O(s) criador(es) original(is) do projeto não são responsáveis por qualquer uso, dano, perda, manipulação ou transação realizada na rede Evaw.
+	•	Usuários participam da plataforma por sua própria conta e risco, concordando com as regras de participação justa, ética e descentralizada.
+
+⸻
+
+3. Uso Ético e Legal
+	•	Evaw é destinado exclusivamente a fins legais, criativos e colaborativos.
+	•	Qualquer uso fraudulento, criminoso ou antiético é totalmente proibido e penalizado pelo sistema automaticamente, sem intervenção do criador.
+	•	Não é permitido usar a rede para atividades que violem leis locais, direitos autorais ou direitos de terceiros.
+
+⸻
+
+4. Neutralidade do Criador
+	•	O criador original não exerce controle, moderação ou gestão sobre conteúdos, tokens ou interações da plataforma.
+	•	Qualquer decisão ou impacto resultante da operação da Evaw não deve ser associado a nenhum indivíduo específico, incluindo o criador.
+
+⸻
+
+5. Sem Garantias
+	•	O projeto é fornecido “no estado em que se encontra” e não oferece garantias de:
+	•	Rentabilidade de tokens ou investimentos
+	•	Continuidade de serviço ou manutenção do sistema
+	•	Ausência de falhas ou vulnerabilidades
+
+⸻
+
+6. Reconhecimento
+	•	Evaw é inspirado em princípios de descentralização, blockchain e economia tokenizada, mas não é uma instituição financeira e não substitui serviços legais, financeiros ou comerciais regulamentados.
 
 
 ## Conclusão
