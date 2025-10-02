@@ -1,4 +1,4 @@
-🚀 Evaw
+Evaw
 
 Evaw é uma rede descentralizada e open source onde conhecimento, criatividade e colaboração humana se transformam em valor real através do token EVAI.
 Aqui, cada ideia, música, documento ou projeto não se perde: ele se torna parte de um ecossistema justo, seguro e coletivo.
@@ -8,7 +8,7 @@ Só têm espaço aqui ideias e criações humanas que realmente geram valor: pes
 
 ⸻
 
-✨ O que torna o Evaw diferente?
+O que torna o Evaw diferente?
 	•	Curadoria comunitária → a comunidade valida conteúdos, sem moderadores centrais.
 	•	Economia ética → tokens EVAI recompensam participação positiva e contribuições reais.
 	•	Distribuição inteligente por tags → conteúdos são classificados e conectam diretamente pesquisadores com pesquisadores, artistas com consumidores, curiosos com informação de qualidade.
@@ -24,14 +24,14 @@ Só têm espaço aqui ideias e criações humanas que realmente geram valor: pes
 	3.	Tokens EVAI são distribuídos → criadores e validadores recebem recompensas justas.
 	4.	A rede cresce → mais conteúdo de qualidade gera mais engajamento e evolução coletiva.
 
-👉 Exemplos:
+Exemplos:
 	•	Um músico sobe uma faixa inédita → validadores aprovam → ele recebe EVAI.
 	•	Um pesquisador compartilha um artigo → a rede valida → ele ganha visibilidade e tokens.
 	•	Um educador posta um documento → validadores confirmam → conhecimento vira valor na rede.
 
 ⸻
 
-🛠 Roadmap inicial
+Roadmap inicial
 	•	Blockchain funcional e registro de validações.
 	•	Algoritmo de credibilidade e peso de votos.
 	•	Distribuição dinâmica de tokens EVAI.
