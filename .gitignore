@@ -39,3 +39,33 @@
 
 # debug information files
 *.dwo
+
+
+
+# ----------------------------------
+# Limpeza de Ambientes e Dependências
+# ----------------------------------
+
+# Ambientes Virtuais Python
+venv/
+.venv/
+
+# Dependências Node.js/JavaScript
+node_modules/
+
+# Pasta de Saída do Build 
+build/
+dist/
+
+# Arquivos e Pastas de Log
+logs/
+
+
+# Caches de Python
+__pycache__/
+
+# Caches de IDE (se usar)
+.vscode/ # Pode ser ignorado, mas alguns preferem versionar as configs básicas.
+.idea/   # Pasta do PyCharm e outras IDEs JetBrains
+
+
