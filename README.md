@@ -8,6 +8,8 @@ Só têm espaço aqui ideias e criações humanas que realmente geram valor: pes
 
 ------
 
+Estrutura Definida
+
 Boilerplate Multi-Linguagem: C++ Otimizado + Python + JavaScript (Node.js)
 
 
