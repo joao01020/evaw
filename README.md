@@ -6,6 +6,12 @@ Aqui, cada ideia, música, documento ou projeto não se perde: ele se torna part
 ⚠️ Diferente de muitas plataformas atuais, o Evaw não é feito para gerar conteúdo artificial em massa.
 Só têm espaço aqui ideias e criações humanas que realmente geram valor: pesquisa, arte, música, informação ou colaboração ética.
 
+------
+
+Boilerplate Multi-Linguagem: C++ Otimizado + Python + JavaScript (Node.js)
+
+
+
 ⸻
 
 O que torna o Evaw diferente?
