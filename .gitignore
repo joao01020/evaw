@@ -67,5 +67,3 @@ __pycache__/
 # Caches de IDE (se usar)
 .vscode/ # Pode ser ignorado, mas alguns preferem versionar as configs básicas.
 .idea/   # Pasta do PyCharm e outras IDEs JetBrains
-
-
